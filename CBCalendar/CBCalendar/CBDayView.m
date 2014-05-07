@@ -82,7 +82,7 @@
         [self addCircleToFontWithContext:context];
     if(addPoint )
         [self addPointWithContext:context];
-    NSLog(@"redraw");
+    //NSLog(@"redraw");
 }
 
 - (void)drawRectangle:(NSRect)rect context:(NSGraphicsContext*)context{
@@ -120,7 +120,7 @@
 - (void)drawCirleInRect:(BOOL)state color:(NSColor *)color{
     addCircleToRect = state;
     //if(!state)
-    NSLog(@"hello");
+    //NSLog(@"hello");
     if(color!=nil)
         circleColor = color;
     [self setNeedsDisplay:YES];
@@ -140,7 +140,7 @@
     //tempBackGroundColor = self.rectBackgroundColor;
     self.alphaValue = 0.3;
     [self setNeedsDisplay:YES];
-    NSLog(@"mouseDown");
+    //NSLog(@"mouseDown");
 }
 
 - (void)mouseUp:(NSEvent *)theEvent{
@@ -148,7 +148,7 @@
     //self.rectBackgroundColor = tempBackGroundColor;
     self.alphaValue = 1;
     [self setNeedsDisplay:YES];
-    NSLog(@"mouseUp");
+    //NSLog(@"mouseUp");
 }
 
 @end
