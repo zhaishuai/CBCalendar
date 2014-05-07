@@ -104,6 +104,34 @@
         }
         weekday = 1;
     }
+    int perious=0;
+    if(month-1<=0)
+        perious = [self getMonthLengthWithMonth:1 withYear:year-1]-firstday+2;
+    else
+        perious = [self getMonthLengthWithMonth:month-1 withYear:year]-firstday+2;
+    
+    for(int i=0;i<firstday-1;i++,perious++){
+        CBDayView *dayView = [[CBDayView alloc] initWithFrame:CGRectMake(w*i, h*5, w, h)];
+        [dayView setDayFontColor:[NSColor colorWithCalibratedRed:184.0/225 green:184.0/225 blue:184.0/225 alpha:1]];
+        [dayView setDay:[NSString stringWithFormat:@"%d",perious]];
+        [views addObject:dayView];
+    }
+    int nextMonthDays = 43-monthLength-firstday;
+    int rawNum = nextMonthDays/7;
+    int leastDays = monthLength-(8-firstday);
+    
+    if(nextMonthDays%7)
+        rawNum++;
+    for(int i=4-leastDays/7,count=1,j=leastDays%7;i>=0;i--){
+        for(;j<7;j++,count++){
+            CBDayView *dayView = [[CBDayView alloc] initWithFrame:CGRectMake(w*j, h*i, w, h)];
+            [dayView setDayFontColor:[NSColor colorWithCalibratedRed:184.0/225 green:184.0/225 blue:184.0/225 alpha:1]];
+            [dayView setDay:[NSString stringWithFormat:@"%d",count]];
+            [views addObject:dayView];
+        }
+        j=0;
+    }
+    
     [self setSubviews:views];
 }
 
