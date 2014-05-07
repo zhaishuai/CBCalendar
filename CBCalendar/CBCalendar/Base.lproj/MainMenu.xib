@@ -649,14 +649,18 @@
         <window title="CBCalendar" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="371">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="517" y="264" width="480" height="360"/>
+            <rect key="contentRect" x="517" y="264" width="486" height="389"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
             <view key="contentView" id="372">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
+                <rect key="frame" x="0.0" y="0.0" width="486" height="389"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <customView id="ytf-pe-GV8" customClass="CBMonthView">
-                        <rect key="frame" x="118" y="58" width="244" height="244"/>
+                        <rect key="frame" x="118" y="29" width="244" height="244"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    </customView>
+                    <customView id="LUC-8K-pcQ" customClass="CBHeadView">
+                        <rect key="frame" x="118" y="273" width="244" height="70"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
                 </subviews>
@@ -671,6 +675,11 @@
         <viewController id="qgm-23-BVB">
             <connections>
                 <outlet property="view" destination="ytf-pe-GV8" id="oQX-dT-sMx"/>
+            </connections>
+        </viewController>
+        <viewController id="bYZ-1W-oq8" customClass="CBH">
+            <connections>
+                <outlet property="view" destination="LUC-8K-pcQ" id="033-CB-R3I"/>
             </connections>
         </viewController>
     </objects>

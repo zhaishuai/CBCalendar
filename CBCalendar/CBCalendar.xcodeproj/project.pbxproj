@@ -20,6 +20,7 @@
 		C61B327C1919BCCE000313E0 /* CBCalendarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C61B327B1919BCCE000313E0 /* CBCalendarTests.m */; };
 		C61B32901919BD91000313E0 /* CBDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = C61B328F1919BD91000313E0 /* CBDayView.m */; };
 		C61B32931919C0EA000313E0 /* CBMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = C61B32921919C0EA000313E0 /* CBMonthView.m */; };
+		C61B3296191A42D1000313E0 /* CBHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = C61B3295191A42D1000313E0 /* CBHeadView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		C61B328F1919BD91000313E0 /* CBDayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDayView.m; sourceTree = "<group>"; };
 		C61B32911919C0EA000313E0 /* CBMonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMonthView.h; sourceTree = "<group>"; };
 		C61B32921919C0EA000313E0 /* CBMonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMonthView.m; sourceTree = "<group>"; };
+		C61B3294191A42D1000313E0 /* CBHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBHeadView.h; sourceTree = "<group>"; };
+		C61B3295191A42D1000313E0 /* CBHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBHeadView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 				C61B328F1919BD91000313E0 /* CBDayView.m */,
 				C61B32911919C0EA000313E0 /* CBMonthView.h */,
 				C61B32921919C0EA000313E0 /* CBMonthView.m */,
+				C61B3294191A42D1000313E0 /* CBHeadView.h */,
+				C61B3295191A42D1000313E0 /* CBHeadView.m */,
 				C61B32691919BCCE000313E0 /* Images.xcassets */,
 				C61B32581919BCCE000313E0 /* Supporting Files */,
 			);
@@ -265,6 +270,7 @@
 			files = (
 				C61B32901919BD91000313E0 /* CBDayView.m in Sources */,
 				C61B325E1919BCCE000313E0 /* main.m in Sources */,
+				C61B3296191A42D1000313E0 /* CBHeadView.m in Sources */,
 				C61B32931919C0EA000313E0 /* CBMonthView.m in Sources */,
 				C61B32651919BCCE000313E0 /* CBAppDelegate.m in Sources */,
 			);
@@ -477,6 +483,7 @@
 				C61B32811919BCCE000313E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C61B32821919BCCE000313E0 /* Build configuration list for PBXNativeTarget "CBCalendarTests" */ = {
 			isa = XCConfigurationList;
@@ -485,6 +492,7 @@
 				C61B32841919BCCE000313E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
