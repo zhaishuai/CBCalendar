@@ -1,5 +1,6 @@
 #import "CBMonthView.h"
 #import "CBDayView.h"
+#import "CBHeadView.h"
 
 @implementation CBMonthView
 
@@ -28,6 +29,9 @@
 - (void)initalize{
     NSDictionary *currentDate = [self getCurrentMonthDayYear];
     [self updateCalendarWithMonth:3 withYear:[[currentDate objectForKey:@"year"] intValue]];
+    NSCalendar *calendar = [[NSLocale currentLocale] objectForKey:NSLocaleCalendar];
+    CBHeadView *head = [[CBHeadView alloc] init];
+    head.SunDayToSatDay = calendar.shortMonthSymbols;
 }
 
 - (void)updateCalendarWithMonth:(int)month withYear:(int)year{

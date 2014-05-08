@@ -48,9 +48,7 @@
     [thePath lineToPoint:CGPointMake(0.1339745962*self.bounds.size.height*0.8, 0.5*self.bounds.size.height*0.8)];
     
     [thePath closePath];
-    [[[NSColor whiteColor] colorWithAlphaComponent:arrowAlpha]setStroke];
     [[[NSColor whiteColor] colorWithAlphaComponent:arrowAlpha]setFill];
-    [thePath stroke];
     [thePath fill];
 }
 
@@ -70,9 +68,7 @@
     [thePath lineToPoint:CGPointMake(0.8660254037*self.bounds.size.height*0.8, 0.5*self.bounds.size.height*0.8)];
     
     [thePath closePath];
-    [[[NSColor whiteColor] colorWithAlphaComponent:arrowAlpha]setStroke];
     [[[NSColor whiteColor] colorWithAlphaComponent:arrowAlpha]setFill];
-    [thePath stroke];
     [thePath fill];
 }
 

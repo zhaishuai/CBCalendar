@@ -653,14 +653,14 @@
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
             <view key="contentView" id="372">
                 <rect key="frame" x="0.0" y="0.0" width="486" height="389"/>
-                <autoresizingMask key="autoresizingMask"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 <subviews>
                     <customView id="ytf-pe-GV8" customClass="CBMonthView">
-                        <rect key="frame" x="118" y="29" width="244" height="244"/>
+                        <rect key="frame" x="121" y="32" width="244" height="244"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
                     <customView id="LUC-8K-pcQ" customClass="CBHeadView">
-                        <rect key="frame" x="118" y="273" width="244" height="60"/>
+                        <rect key="frame" x="121" y="275" width="244" height="78"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
                 </subviews>

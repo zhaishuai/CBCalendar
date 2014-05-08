@@ -26,5 +26,6 @@
 @interface CBHeadView : NSView
 
 @property (nonatomic ,strong)NSArray *SunDayToSatDay;
+@property (nonatomic ,strong)NSTextField *monthAndYear;
 
 @end

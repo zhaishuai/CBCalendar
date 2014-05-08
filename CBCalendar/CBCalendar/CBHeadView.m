@@ -8,7 +8,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code here.
+        [self initalize];
     }
     return self;
 }
@@ -19,6 +19,21 @@
     CBArrow *rightArrow = [[CBArrow alloc] initWithFrame:CGRectMake(self.bounds.size.width*0.9-self.bounds.size.height*0.15, self.bounds.size.height*0.5, self.bounds.size.height*0.2, self.bounds.size.height*0.2) withLeft:YES];
     [subViews addObject:leftArrow];
     [subViews addObject:rightArrow];
+    //NSString *dateString = @"February 2013";
+    NSString *dateString = @"2013 二月";
+//    CBLabel *label = [[CBLabel alloc] initWithFrame:NSMakeRect(self.bounds.size.width/2-self.bounds.size.width*0.25, self.bounds.size.height*0.43, self.bounds.size.width*0.5, 0) withString:dateString];
+    self.monthAndYear = [[NSTextField alloc] initWithFrame:NSMakeRect(self.bounds.size.width*0.2, 0, self.bounds.size.width*0.6, self.bounds.size.height*0.7) ];
+    [self.monthAndYear setStringValue:dateString];
+    [self.monthAndYear setFont:[NSFont boldSystemFontOfSize:self.bounds.size.height*0.18]];
+    [self.monthAndYear setTextColor:[NSColor whiteColor]];
+    [self.monthAndYear setAlignment:NSCenterTextAlignment];
+    [self.monthAndYear setEditable:NO];
+    [self.monthAndYear setSelectable:NO];
+    [self.monthAndYear setBordered:NO];
+    [self.monthAndYear setDrawsBackground:NO];
+
+    [subViews addObject:self.monthAndYear];
+    
     [self setSubviews:subViews];
 }
 
@@ -65,6 +80,7 @@
         NSAttributedString * currentText=[[NSAttributedString alloc] initWithString:[self.SunDayToSatDay objectAtIndex:i] attributes: attributes];
         [currentText drawAtPoint:NSMakePoint(w*(i+0.2),self.bounds.size.height*0.1)];
     }
+    
 
 }
 
