@@ -660,7 +660,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
                     <customView id="LUC-8K-pcQ" customClass="CBHeadView">
-                        <rect key="frame" x="118" y="273" width="244" height="70"/>
+                        <rect key="frame" x="118" y="273" width="244" height="60"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
                 </subviews>

@@ -25,4 +25,6 @@
 
 @interface CBHeadView : NSView
 
+@property (nonatomic ,strong)NSArray *SunDayToSatDay;
+
 @end

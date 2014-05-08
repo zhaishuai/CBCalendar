@@ -27,7 +27,7 @@
 
 - (void)initalize{
     NSDictionary *currentDate = [self getCurrentMonthDayYear];
-    [self updateCalendarWithMonth:[[currentDate objectForKey:@"month"] intValue] withYear:[[currentDate objectForKey:@"year"] intValue]];
+    [self updateCalendarWithMonth:3 withYear:[[currentDate objectForKey:@"year"] intValue]];
 }
 
 - (void)updateCalendarWithMonth:(int)month withYear:(int)year{
