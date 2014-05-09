@@ -61,8 +61,8 @@
     NSDictionary *dict = [monthView currentDate];
     self.month = [[dict objectForKey:@"month"] intValue];
     self.year = [[dict objectForKey:@"year"] intValue];
-    [self setHeadViewTitle];
     [monthView updateCalendarWithMonth:self.month withYear:self.year];
+    [self setHeadViewTitle];
 }
 
 - (void)setHeadViewTitle{

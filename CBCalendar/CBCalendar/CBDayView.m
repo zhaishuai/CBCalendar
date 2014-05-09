@@ -1,7 +1,5 @@
 #import "CBDayView.h"
 
-#import "CBDayView.h"
-
 @implementation CBDayView{
     NSColor *circleColor;
     NSColor *pointColor;
@@ -14,20 +12,20 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self initalize];
+        [self initialize];
     }
     return self;
 }
 - (id)init{
     self = [super init];
     if(self){
-        [self initalize];
+        [self initialize];
         
     }
     return self;
 }
 
-- (void)initalize{
+- (void)initialize{
     self.rectBoundColor = [NSColor colorWithCalibratedRed:217.0/255 green:217.0/255 blue:217.0/255 alpha:1];
     self.rectBackgroundColor = [NSColor colorWithCalibratedRed:251.0/255 green:251.0/255 blue:251.0/255 alpha:1];
     self.dayFontColor = [NSColor colorWithCalibratedRed:119.0/255 green:119.0/255 blue:119.0/255 alpha:1];
