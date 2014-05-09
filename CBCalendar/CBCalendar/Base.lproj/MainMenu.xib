@@ -655,12 +655,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="486" height="389"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 <subviews>
-                    <customView id="ytf-pe-GV8" customClass="CBMonthView">
-                        <rect key="frame" x="121" y="32" width="244" height="244"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    </customView>
-                    <customView id="LUC-8K-pcQ" customClass="CBHeadView">
-                        <rect key="frame" x="121" y="275" width="244" height="78"/>
+                    <customView id="Wcr-Xl-uEj">
+                        <rect key="frame" x="181" y="28" width="268" height="308"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
                 </subviews>
@@ -672,14 +668,9 @@
             </connections>
         </customObject>
         <customObject id="420" customClass="NSFontManager"/>
-        <viewController id="qgm-23-BVB">
+        <viewController id="Tnq-De-3RX" customClass="CBCalendarViewController">
             <connections>
-                <outlet property="view" destination="ytf-pe-GV8" id="oQX-dT-sMx"/>
-            </connections>
-        </viewController>
-        <viewController id="bYZ-1W-oq8" customClass="CBH">
-            <connections>
-                <outlet property="view" destination="LUC-8K-pcQ" id="033-CB-R3I"/>
+                <outlet property="view" destination="Wcr-Xl-uEj" id="Oac-rW-Apa"/>
             </connections>
         </viewController>
     </objects>

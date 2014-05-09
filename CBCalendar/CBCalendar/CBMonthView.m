@@ -1,6 +1,5 @@
 #import "CBMonthView.h"
 #import "CBDayView.h"
-#import "CBHeadView.h"
 
 @implementation CBMonthView
 
@@ -8,7 +7,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code here.
+        [self initialize];
     }
     return self;
 }
@@ -16,22 +15,19 @@
 - (id)init{
     self = [super init];
     if(self){
-        [self initalize];
-        NSLog(@"hello");
+        [self initialize];
     }
     return self;
 }
 
 - (void)awakeFromNib{
-    [self initalize];
+    [self initialize];
 }
 
-- (void)initalize{
+- (void)initialize{
     NSDictionary *currentDate = [self getCurrentMonthDayYear];
-    [self updateCalendarWithMonth:3 withYear:[[currentDate objectForKey:@"year"] intValue]];
-    NSCalendar *calendar = [[NSLocale currentLocale] objectForKey:NSLocaleCalendar];
-    CBHeadView *head = [[CBHeadView alloc] init];
-    head.SunDayToSatDay = calendar.shortMonthSymbols;
+    self.currentDate = currentDate;
+    [self updateCalendarWithMonth:[[currentDate objectForKey:@"month"] intValue] withYear:[[currentDate objectForKey:@"year"] intValue]];
 }
 
 - (void)updateCalendarWithMonth:(int)month withYear:(int)year{
@@ -41,11 +37,12 @@
     int firstday = [self getWeekdayWithMonth:month withDay:1 withYear:year];
     int monthLength = [self getMonthLengthWithMonth:month withYear:year];
     NSDictionary *currentDate = [self getCurrentMonthDayYear];
-    NSLog(@"year:%d  month:%d   firstday:%d monthLength:%d",year,month,firstday,monthLength);
+    NSLog(@"%d",monthLength);
     for(int day = 1,i=5,weekday = firstday;day <= monthLength ;i--){
-        for(;weekday <= 7;weekday++,day++){
+        for(;weekday <= 7&&day <= monthLength;weekday++,day++){
             CBDayView *dayView = [[CBDayView alloc] initWithFrame:CGRectMake(w*(weekday-1), h*i, w, h)];
             dayView.day = [NSString stringWithFormat:@"%d",day];
+            dayView.state = 0;
             if([[currentDate objectForKey:@"day"] intValue]==day&&year==[[currentDate objectForKey:@"year"] intValue]&&month==[[currentDate objectForKey:@"month"] intValue]){
                 [dayView drawCirleInRect:YES color:nil];
             }
@@ -63,6 +60,7 @@
         CBDayView *dayView = [[CBDayView alloc] initWithFrame:CGRectMake(w*i, h*5, w, h)];
         [dayView setDayFontColor:[NSColor colorWithCalibratedRed:184.0/225 green:184.0/225 blue:184.0/225 alpha:1]];
         [dayView setDay:[NSString stringWithFormat:@"%d",perious]];
+        dayView.state = -1;
         [views addObject:dayView];
     }
     int nextMonthDays = 43-monthLength-firstday;
@@ -76,6 +74,7 @@
             CBDayView *dayView = [[CBDayView alloc] initWithFrame:CGRectMake(w*j, h*i, w, h)];
             [dayView setDayFontColor:[NSColor colorWithCalibratedRed:184.0/225 green:184.0/225 blue:184.0/225 alpha:1]];
             [dayView setDay:[NSString stringWithFormat:@"%d",count]];
+            dayView.state = 1;
             [views addObject:dayView];
         }
         j=0;

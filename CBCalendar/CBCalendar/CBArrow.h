@@ -23,6 +23,12 @@
  */
 
 #import <Cocoa/Cocoa.h>
+@class CBArrow;
+@protocol arrowClick <NSObject>
+
+- (void) clickArrow:(CBArrow *)arrow;
+
+@end
 
 @interface CBArrow : NSView
 
@@ -32,4 +38,7 @@
  *  withLeft: NO is left,YES is Right
  */
 - (id)initWithFrame:(NSRect)frame withLeft:(BOOL)left;
+
+@property (nonatomic,weak)id<arrowClick> delegate;
+
 @end

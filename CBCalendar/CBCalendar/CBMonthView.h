@@ -26,4 +26,8 @@
 
 @interface CBMonthView : NSView
 
+@property (nonatomic, strong)NSDictionary *currentDate;
+
+- (void)updateCalendarWithMonth:(int)month withYear:(int)year;
+
 @end

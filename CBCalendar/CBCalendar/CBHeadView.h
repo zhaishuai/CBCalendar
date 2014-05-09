@@ -22,10 +22,11 @@
  SOFTWARE.
  */
 #import <Cocoa/Cocoa.h>
+#import "CBCircle.h"
+#import "CBArrow.h"
 
 @interface CBHeadView : NSView
 
 @property (nonatomic ,strong)NSArray *SunDayToSatDay;
 @property (nonatomic ,strong)NSTextField *monthAndYear;
-
 @end

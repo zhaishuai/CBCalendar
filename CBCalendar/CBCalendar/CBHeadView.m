@@ -1,6 +1,7 @@
 
 #import "CBHeadView.h"
 #import "CBArrow.h"
+#import "CBCircle.h"
 
 @implementation CBHeadView
 
@@ -8,12 +9,12 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self initalize];
+        [self initialize];
     }
     return self;
 }
 
-- (void)initalize{
+- (void)initialize{
     NSMutableArray *subViews = [[NSMutableArray alloc] init];
     CBArrow *leftArrow = [[CBArrow alloc] initWithFrame:CGRectMake(self.bounds.size.width*0.1, self.bounds.size.height*0.5, self.bounds.size.height*0.2, self.bounds.size.height*0.2) withLeft:NO];
     CBArrow *rightArrow = [[CBArrow alloc] initWithFrame:CGRectMake(self.bounds.size.width*0.9-self.bounds.size.height*0.15, self.bounds.size.height*0.5, self.bounds.size.height*0.2, self.bounds.size.height*0.2) withLeft:YES];
@@ -23,6 +24,8 @@
     NSString *dateString = @"2013 二月";
 //    CBLabel *label = [[CBLabel alloc] initWithFrame:NSMakeRect(self.bounds.size.width/2-self.bounds.size.width*0.25, self.bounds.size.height*0.43, self.bounds.size.width*0.5, 0) withString:dateString];
     self.monthAndYear = [[NSTextField alloc] initWithFrame:NSMakeRect(self.bounds.size.width*0.2, 0, self.bounds.size.width*0.6, self.bounds.size.height*0.7) ];
+
+    
     [self.monthAndYear setStringValue:dateString];
     [self.monthAndYear setFont:[NSFont boldSystemFontOfSize:self.bounds.size.height*0.18]];
     [self.monthAndYear setTextColor:[NSColor whiteColor]];
@@ -33,7 +36,8 @@
     [self.monthAndYear setDrawsBackground:NO];
 
     [subViews addObject:self.monthAndYear];
-    
+    CBCircle *circle = [[CBCircle alloc] initWithFrame:NSMakeRect(self.bounds.size.width*0.18, self.bounds.size.height*0.5, self.bounds.size.height*0.2, self.bounds.size.height*0.2)];
+    [subViews addObject:circle];
     [self setSubviews:subViews];
 }
 
@@ -48,8 +52,7 @@
     [a addObject:@"SAT"];
     self.SunDayToSatDay = a;
     [super awakeFromNib];
-    [self initalize];
-
+    [self initialize];
 }
 
 - (void)drawRect:(NSRect)dirtyRect

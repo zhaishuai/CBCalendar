@@ -28,7 +28,6 @@
         [self drawRightTriangle];
     else
         [self drawLeftTriangle];
-    NSLog(@"reDraw");
 }
 
 - (void)drawLeftTriangle{
@@ -110,6 +109,7 @@
 - (void)mouseUp:(NSEvent *)theEvent{
     arrowAlpha = 1;
     [self setNeedsDisplay:YES];
+    [self.delegate clickArrow:self];
 }
 
 @end

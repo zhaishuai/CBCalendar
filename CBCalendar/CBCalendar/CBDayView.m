@@ -148,7 +148,7 @@
     //self.rectBackgroundColor = tempBackGroundColor;
     self.alphaValue = 1;
     [self setNeedsDisplay:YES];
-    //NSLog(@"mouseUp");
+    [self.delegate clickDay:self];
 }
 
 @end

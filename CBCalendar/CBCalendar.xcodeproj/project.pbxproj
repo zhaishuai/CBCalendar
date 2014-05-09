@@ -22,6 +22,8 @@
 		C61B32931919C0EA000313E0 /* CBMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = C61B32921919C0EA000313E0 /* CBMonthView.m */; };
 		C61B3296191A42D1000313E0 /* CBHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = C61B3295191A42D1000313E0 /* CBHeadView.m */; };
 		C61B3299191A6140000313E0 /* CBArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = C61B3298191A6140000313E0 /* CBArrow.m */; };
+		C640543F191C847E003ACE55 /* CBCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = C640543E191C847E003ACE55 /* CBCircle.m */; };
+		C6405448191CA1A6003ACE55 /* CBCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6405447191CA1A6003ACE55 /* CBCalendarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,10 @@
 		C61B3295191A42D1000313E0 /* CBHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBHeadView.m; sourceTree = "<group>"; };
 		C61B3297191A6140000313E0 /* CBArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBArrow.h; sourceTree = "<group>"; };
 		C61B3298191A6140000313E0 /* CBArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBArrow.m; sourceTree = "<group>"; };
+		C640543D191C847E003ACE55 /* CBCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBCircle.h; sourceTree = "<group>"; };
+		C640543E191C847E003ACE55 /* CBCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBCircle.m; sourceTree = "<group>"; };
+		C6405446191CA1A6003ACE55 /* CBCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBCalendarViewController.h; sourceTree = SOURCE_ROOT; };
+		C6405447191CA1A6003ACE55 /* CBCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBCalendarViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,11 +133,15 @@
 		C61B32571919BCCE000313E0 /* CBCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				C6405446191CA1A6003ACE55 /* CBCalendarViewController.h */,
+				C6405447191CA1A6003ACE55 /* CBCalendarViewController.m */,
 				C61B32631919BCCE000313E0 /* CBAppDelegate.h */,
 				C61B32641919BCCE000313E0 /* CBAppDelegate.m */,
 				C61B32661919BCCE000313E0 /* MainMenu.xib */,
 				C61B3297191A6140000313E0 /* CBArrow.h */,
 				C61B3298191A6140000313E0 /* CBArrow.m */,
+				C640543D191C847E003ACE55 /* CBCircle.h */,
+				C640543E191C847E003ACE55 /* CBCircle.m */,
 				C61B328E1919BD91000313E0 /* CBDayView.h */,
 				C61B328F1919BD91000313E0 /* CBDayView.m */,
 				C61B32911919C0EA000313E0 /* CBMonthView.h */,
@@ -276,6 +286,8 @@
 				C61B3299191A6140000313E0 /* CBArrow.m in Sources */,
 				C61B32901919BD91000313E0 /* CBDayView.m in Sources */,
 				C61B325E1919BCCE000313E0 /* main.m in Sources */,
+				C6405448191CA1A6003ACE55 /* CBCalendarViewController.m in Sources */,
+				C640543F191C847E003ACE55 /* CBCircle.m in Sources */,
 				C61B3296191A42D1000313E0 /* CBHeadView.m in Sources */,
 				C61B32931919C0EA000313E0 /* CBMonthView.m in Sources */,
 				C61B32651919BCCE000313E0 /* CBAppDelegate.m in Sources */,

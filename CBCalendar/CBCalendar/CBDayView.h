@@ -23,9 +23,17 @@
  */
 
 #import <Cocoa/Cocoa.h>
+@class CBDayView;
+@protocol dayClick <NSObject>
+
+- (void)clickDay:(CBDayView *)dayView;
+
+@end
 
 @interface CBDayView : NSView
+@property (nonatomic, weak)id<dayClick> delegate;
 @property (nonatomic,strong)NSString *day;
+//-1 means last month; 0 means current month; 1 means next month;
 @property int state;
 @property (nonatomic,strong)NSColor *rectBackgroundColor;
 @property (nonatomic,strong)NSColor *rectBoundColor;
